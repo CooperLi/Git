@@ -4,6 +4,7 @@
 - 切换分支: git checkout xxx
 - 创建+切换分支: git checkout -b xxx
 - 合并某分支到当前分支: git merge xxx
+  - 这个注意, 比如我们要把dev合并到master, 就要先进入master分支, 然后执行上面的命令. 而不是在dev分支执行 git merge master, 那是很愚蠢的.
 - 删除分支: git branch -d xxx
 -------------------------------远程repo-------------------------------
 - 先github上面建立一个repo, 然后, git clone xxx 到本地
