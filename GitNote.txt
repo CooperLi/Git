@@ -1,22 +1,23 @@
 -------------------------------分支-------------------------------
-查看分支: git branch 
-创建分支: git branch xxx
-切换分支: git checkout xxx
-创建+切换分支: git checkout -b xxx
-合并某分支到当前分支: git merge xxx
-删除分支: git branch -d xxx
+- 查看分支: git branch 
+- 创建分支: git branch xxx
+- 切换分支: git checkout xxx
+- 创建+切换分支: git checkout -b xxx
+- 合并某分支到当前分支: git merge xxx
+- 删除分支: git branch -d xxx
 -------------------------------远程repo-------------------------------
-先github上面建立一个repo, 然后, git clone xxx 到本地
-接着可以把本地要添加的文件放到这个文件夹里面, 然后 git add . 意思是添加文件夹里面的全部文件
-然后git commit -m "xxx" 确认添加.
-最后git push origin master就好了.
-注意, git clone的时候, 最好用ssh的地址, https的话, 每次push都要输密码, 很烦.
+- 先github上面建立一个repo, 然后, git clone xxx 到本地
+- 接着可以把本地要添加的文件放到这个文件夹里面, 然后 git add . 意思是添加文件夹里面的全部文件
+- 然后git commit -m "xxx" 确认添加.
+- 最后git push origin master就好了.
+- 注意, git clone的时候, 最好用ssh的地址, https的话, 每次push都要输密码, 很烦.
 -------------------------------分支策略-------------------------------
-在实际开发中, master这个分支是很稳定的, 也就是仅用来发布新版本 ,而不是用来在上面干活的.
-要干活, 自己建dev分支去
-每个人都在dev这个分支上工作, 然后在这个分支下有自己的分支, 然后时不时的往dev上面合并, 最后dev才会往master上面合并
-合并分支时: git merge --no-ff -m "xxx" dev, 这样的好处是 合并后的历史有分支, 看得出来曾经做过合并.
+- 在实际开发中, master这个分支是很稳定的, 也就是仅用来发布新版本 ,而不是用来在上面干活的.
+- 要干活, 自己建dev分支去
+- 每个人都在dev这个分支上工作, 然后在这个分支下有自己的分支, 然后时不时的往dev上面合并, 最后dev才会往master上面合并
+- 合并分支时: git merge --no-ff -m "xxx" dev, 这样的好处是 合并后的历史有分支, 看得出来曾经做过合并.
+- 丢弃一个没有被合并过得分支: git branch -D xxx
 -------------------------------Bug临时出现-------------------------------
-遇到这种情况: 正在dev分支上工作, 工作区还有没有提交的工程, 但是不能提交, 因为没完成, 但是有一个紧急的bug在别的分支上.
-这时候, 先把工作现场git stash 一下, 然后去修复bug, 修复完毕, 再git stash pop, 回到工作现场.
-这个和screen有点像.
+- 遇到这种情况: 正在dev分支上工作, 工作区还有没有提交的工程, 但是不能提交, 因为没完成, 但是有一个紧急的bug在别的分支上.
+- 这时候, 先把工作现场git stash 一下, 然后去修复bug, 修复完毕, 再git stash pop, 回到工作现场.
+- 这个和screen有点像.
