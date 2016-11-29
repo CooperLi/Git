@@ -40,3 +40,9 @@
 6. 查看远程库信息, git remote -v
 7. 在本地创建和远程分支对应的分支, 应使用git checkout -b xxx origin/xxx
 
+-------------------------------标签tag-------------------------------
+1. 进到需要打标签的分支上
+2. git tag xxx 打了一个新标签, 默认是给HEAD打的
+3. git tag 查看所有标签
+4. git tag xxx commitId 可以给不是HEAD的打标签.
+5. git tag -a xxx -m "xxxxxxxxx" 可以指定标签信息.
