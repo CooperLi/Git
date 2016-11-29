@@ -1,7 +1,13 @@
------------------------------------分支-----------------------------------
+-------------------------------分支-------------------------------
 查看分支: git branch 
 创建分支: git branch xxx
 切换分支: git checkout xxx
 创建+切换分支: git checkout -b xxx
 合并某分支到当前分支: git merge xxx
 删除分支: git branch -d xxx
+-------------------------------远程repo-------------------------------
+先github上面建立一个repo, 然后, git clone xxx 到本地
+接着可以把本地要添加的文件放到这个文件夹里面, 然后 git add . 意思是添加文件夹里面的全部文件
+然后git commit -m "xxx" 确认添加.
+最后git push origin master就好了.
+注意, git clone的时候, 最好用ssh的地址, https的话, 每次push都要输密码, 很烦.
