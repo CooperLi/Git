@@ -5,6 +5,7 @@
 - 同步到远程： git push origin master
 - 如果出错， 是因为远端的比本地的新， 要先git pull, 在git push
 - IMPORTANT: 每次修改完文件要git add 文件名
+- 提交之前, 最好先 git diff 查看下修改的内容, 确保无误之后再git add
 -------------------------------分支-------------------------------
 - 查看分支: git branch 
 - 创建分支: git branch xxx
